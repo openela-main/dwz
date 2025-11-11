@@ -1,7 +1,7 @@
 Summary: DWARF optimization and duplicate removal tool
 Name: dwz
-Version: 0.15
-Release: 7%{?dist}
+Version: 0.16
+Release: 1%{?dist}
 License: GPL-3.0-or-later AND (GPL-3.0-or-later WITH GCC-exception-3.1) AND GPL-2.0-or-later AND (GPL-2.0-or-later WITH GCC-exception-2.0) AND LGPL-2.0-or-later
 URL: https://sourceware.org/dwz/
 Source: https://sourceware.org/ftp/dwz/releases/%{name}-%{version}.tar.xz
@@ -39,6 +39,9 @@ CFLAGS="" LDFLAGS="" make check
 %{_mandir}/man1/dwz.1*
 
 %changelog
+* Fri Jul  4 2025 Maciej W. Rozycki <macro@redhat.com> - 0.16-1
+- Update to dwz 0.16
+
 * Mon Jun 24 2024 Troy Dawson <tdawson@redhat.com> - 0.15-7
 - Bump release for June 2024 mass rebuild
 
