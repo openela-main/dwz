@@ -1,11 +1,11 @@
 Summary: DWARF optimization and duplicate removal tool
 Name: dwz
-Version: 0.14
-Release: 3%{?dist}
+Version: 0.16
+Release: 1%{?dist}
 License: GPLv2+ and GPLv3+
-Source: %{name}-0.14.tar.xz
+Source: %{name}-%{version}.tar.xz
 BuildRequires: gcc, gcc-c++, gdb, elfutils-libelf-devel, dejagnu
-BuildRequires: make
+BuildRequires: make, xxhash-devel
 
 %description
 The dwz package contains a program that attempts to optimize DWARF
@@ -36,6 +36,10 @@ make check
 %{_mandir}/man1/dwz.1*
 
 %changelog
+* Thu Jun 26 2025 Maciej W. Rozycki <macro@redhat.com> - 0.16-1
+- Update to dwz 0.16
+- Require xxhash-devel to build
+
 * Mon Aug 09 2021 Mohan Boddu <mboddu@redhat.com> - 0.14-3
 - Rebuilt for IMA sigs, glibc 2.34, aarch64 flags
   Related: rhbz#1991688
